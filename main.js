@@ -65,12 +65,16 @@ function edadCanina() {
   let edadHumana;
   do {
     const entrada = prompt("Ingrese ls edad de su perro");
-    edadHumana = parseInt(entrada);
+    edadHumana = Number(entrada);
 
-    if (isNaN(edadHumana)) {
-      alert("Ingrese un numero valido");
+    if(entrada === null){
+      return;
     }
-  } while (isNaN(edadHumana));
+
+    if (Number.isNaN(edadHumana) || edadHumana <= 0) {
+      alert("Ingrese un numero valido ");
+    }
+  } while (Number.isNaN(edadHumana));
 
   const edadCanina = edadHumana * 7;
 
@@ -79,6 +83,7 @@ function edadCanina() {
 
 /*
 proceso de solucion 5
-para esta funcion, le agregue un boton en el html para disparar la funcion, pido al usuario que ingrese su edad, luego valido que sea un numero, si no lo es le muestro un mensaje
+para esta funcion, le agregue un boton en el html para disparar la funcion, pido al usuario que ingrese su edad, luego valido que sea un numero, si no es le muestro un mensaje
 que esta mal, si es un numero valido, multiplico la edad por 7 y muestro el resultado.
+
 */
