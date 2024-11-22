@@ -20,7 +20,7 @@ function contarPalaras(cadena) {
 
 console.log("Soluciion 2: Contar palabras de una cadena");
 console.log(contarPalaras("Hola mundo"));
-console.log(contarPalaras("Humahuaca es un lugar copado" ));
+console.log(contarPalaras("Humahuaca es un lugar copado"));
 console.log(contarPalaras("lorem ipsum dolor sit amet"));
 
 console.log("//////////////////////////////////////////////////////");
@@ -35,7 +35,7 @@ function invertirCadena(cadena) {
 
 console.log("Solucion 3: Invertir una cadena");
 console.log(invertirCadena("Hola mundo"));
-console.log(invertirCadena("Humahuaca es un lugar copado" ));
+console.log(invertirCadena("Humahuaca es un lugar copado"));
 console.log(invertirCadena("heroes del silencio, iberia sumergida"));
 
 console.log("//////////////////////////////////////////////////////");
@@ -45,8 +45,8 @@ para esta funcion use split() para serparar la cadena en un array, luego use rev
 use join() para unir el array en un string.
 */
 
-function esPalindromo(cadena){
-    return cadena === cadena.split("").reverse().join("");
+function esPalindromo(cadena) {
+  return cadena === cadena.split("").reverse().join("");
 }
 
 console.log("Solucion 4: Verificar si una cadena es palindromo");
@@ -61,19 +61,20 @@ console.log("//////////////////////////////////////////////////////");
 use la misma funcion que el punto 3, con la diferencia que la comparo con la cadena original, si da true es palindromo.
 */
 
-
-function edadCanina(){
-    const entrada = prompt("Ingrese su edad");
-    const edadHumana = parseInt(entrada);
+function edadCanina() {
+  let edadHumana;
+  do {
+    const entrada = prompt("Ingrese ls edad de su perro");
+    edadHumana = parseInt(entrada);
 
     if (isNaN(edadHumana)) {
-        alert("Ingrese un numero valido");
+      alert("Ingrese un numero valido");
     }
+  } while (isNaN(edadHumana));
 
-    const edadCanina = edadHumana * 7;
+  const edadCanina = edadHumana * 7;
 
-    alert("Su perro tiene: " + edadCanina + " años caninos");
-
+  alert("Su perro tiene: " + edadCanina + " años caninos");
 }
 
 /*
